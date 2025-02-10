@@ -2,10 +2,10 @@
 
 react
 
-- [ ] createElement,
-- [ ] render,
-- [ ] useState,
-- [ ] useEffect,
+- [x] createElement,
+- [x] render,
+- [x] useState,
+- [x] useEffect,
 
 react-route
 
