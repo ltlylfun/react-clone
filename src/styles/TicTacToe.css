@@ -1,0 +1,116 @@
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start; /* 改为顶部对齐 */
+  padding: 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f2ff 100%);
+  min-height: auto; /* 改为自动高度 */
+  height: auto;
+}
+
+.game-board {
+  position: sticky; /* 添加固定定位 */
+  top: 20px; /* 距顶部间距 */
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  margin: 4px;
+  background: #fff;
+  border: 2px solid #8b9eff;
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #6b7280;
+}
+
+.square:hover {
+  background: #f8faff;
+  transform: translateY(-2px);
+}
+
+.status {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #6b7280;
+  text-align: center;
+  font-weight: bold;
+}
+
+.game-info {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 400px; /* 设置一个固定的最大高度 */
+  overflow-y: auto; /* 添加垂直滚动 */
+}
+
+.game-info::-webkit-scrollbar {
+  width: 8px;
+}
+
+.game-info::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.game-info::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.game-info::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.game-info ol {
+  padding-left: 20px;
+}
+
+.game-info button {
+  margin: 5px 0;
+  padding: 8px 12px;
+  background: #8b9eff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.game-info button:hover {
+  background: #a5b4ff;
+}
+
+/* 添加胜利时的动画效果 */
+@keyframes winner {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.square.winner {
+  animation: winner 0.5s ease-in-out;
+  background: #7defa1;
+  color: white;
+}
