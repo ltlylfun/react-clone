@@ -8,19 +8,19 @@ const localSongs = [
     id: 1,
     title: "Intentions",
     artist: "Justin Bieber, Quavo",
-    audioSrc: "/music/Justin Bieber _ Quavo - Intentions.mp3",
+    audioSrc: "./music/Justin Bieber _ Quavo - Intentions.mp3",
   },
   {
     id: 2,
     title: "Changes",
     artist: "Justin Bieber",
-    audioSrc: "/music/Justin Bieber - Changes.mp3",
+    audioSrc: "./music/Justin Bieber - Changes.mp3",
   },
   {
     id: 3,
     title: "ETA",
     artist: "Justin Bieber",
-    audioSrc: "/music/Justin Bieber - ETA.mp3",
+    audioSrc: "./music/Justin Bieber - ETA.mp3",
   },
 ];
 
