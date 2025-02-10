@@ -1,0 +1,137 @@
+@import "./variables.css";
+
+.todo-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--background-light);
+  color: var(--text-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  color: var(--text-primary);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.todo-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.todo-input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.todo-button {
+  padding: 0.8rem 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.todo-button:hover {
+  background: var(--primary-hover);
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* 改为顶部对齐，避免长文本影响布局 */
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background: #ffffff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  animation: slideIn 0.3s ease;
+  width: 100%; /* 确保容器占满宽度 */
+}
+
+.todo-item:hover {
+  transform: translateX(5px);
+  background: #f8faff;
+}
+
+.todo-item.completed span {
+  text-decoration: line-through;
+  color: #868e96;
+}
+
+.todo-item.completed {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+}
+
+.todo-item span {
+  cursor: pointer;
+  flex: 1;
+  white-space: normal; /* 允许文本换行 */
+  word-wrap: break-word; /* 确保长单词也会换行 */
+  margin-right: 1rem;
+  min-width: 0; /* 确保flex子项可以收缩 */
+  line-height: 1.5; /* 增加行高使文本更易读 */
+}
+
+.delete-button {
+  padding: 0.5rem 1rem;
+  background: #ff8a8a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.delete-button:hover {
+  background: #ffb3b3;
+}
+
+.add-button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary-color);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-button:hover {
+  background: var(--primary-hover);
+}
+
+/* 添加动画效果 */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
