@@ -7,7 +7,4 @@ react
 - [x] useState,
 - [x] useEffect,
 
-react-route
-
-- [ ] Route,
-- [ ] Link,
+- [ ]react-route
