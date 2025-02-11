@@ -1,6 +1,11 @@
 @import "./variables.css";
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   background: var(--background-light);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 1rem 2rem;
