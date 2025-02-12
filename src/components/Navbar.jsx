@@ -9,7 +9,7 @@ const scrollToSection = (id) => {
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="nav-logo">FakeReact Demo</div>
+      <div className="nav-logo">以下3个组件是由自定义React实现的</div>
       <div className="nav-links">
         <button onClick={() => scrollToSection("MusicPlayer")}>
           MusicPlayer
